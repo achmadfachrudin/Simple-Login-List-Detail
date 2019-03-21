@@ -16,6 +16,7 @@ android {
         versionName "1.0.1"
         multiDexEnabled true
         resConfigs "en"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     dataBinding {
         enabled = true
@@ -144,7 +145,7 @@ dependencies {
     kapt 'com.google.dagger:dagger-compiler:2.21'
 
     // firebase
-    implementation 'com.google.firebase:firebase-core:16.0.7'
+    implementation 'com.google.firebase:firebase-core:16.0.8'
 
     // network
     implementation "io.reactivex.rxjava2:rxjava:2.2.6"
@@ -158,4 +159,17 @@ dependencies {
     // glide
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     kapt 'com.github.bumptech.glide:compiler:4.8.0'
+
+    // android test
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.1.1'
+    testImplementation 'org.mockito:mockito-core:2.24.0'
+    testImplementation 'org.mockito:mockito-inline:2.24.0'
+    testImplementation "org.powermock:powermock-module-junit4:2.0.0"
+
+    androidTestImplementation 'androidx.test:core:1.1.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+//    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test:rules:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 }
