@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+                name="view"
+                type="com.fachrudin.project.app.presentation.view.UserListView"/>
+
+        <variable
+                name="vm"
+                type="com.fachrudin.project.app.presentation.viewmodel.UserListViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <FrameLayout
+                android:id="@+id/frame_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layout_constraintBottom_toTopOf="@id/nav_bottom"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_weight="1"/>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/nav_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:itemBackground="@android:color/white"
+                app:itemIconTint="@color/colorAccent"
+                app:itemTextColor="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:menu="@menu/bottom_menu"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

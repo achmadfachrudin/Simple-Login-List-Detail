@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">project</string>
+    <string name="app_msg_close">Press the Back button again to exit</string>
+
+    <!--Login-->
+    <string name="login_title">Login</string>
+    <string name="login_label_email">Email</string>
+    <string name="login_label_password">Password</string>
+    <string name="login_error_email_empty">Enter your email</string>
+    <string name="login_error_email_not_valid">Invalid email format</string>
+    <string name="login_error_password_empty">Enter your password</string>
+    <string name="login_btn_login">Login</string>
+
+
+    <!--User-->
+    <string name="user_list_title">User List</string>
+    <string name="user_detail_title">User Detail</string>
+
+
+    <!--Profile-->
+    <string name="profile_title">My Profile</string>
+    <string name="profile_label_email">Email</string>
+    <string name="profile_label_password">Password</string>
+    <string name="profil_btn_logout">Logout</string>
+</resources>

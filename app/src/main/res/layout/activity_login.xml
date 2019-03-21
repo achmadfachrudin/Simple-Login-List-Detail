@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+                name="view"
+                type="com.fachrudin.project.app.presentation.view.LoginView"/>
+
+        <variable
+                name="vm"
+                type="com.fachrudin.project.app.presentation.viewmodel.LoginViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <!--Email-->
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:hint="@string/login_label_email"
+                app:error="@{vm.bTextEmailError}"
+                app:errorEnabled="@{safeUnbox(vm.bTextEmailError == null) ? false : true}">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@={vm.bTextEmail}"
+                    tools:text="Email"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Password-->
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/til_email"
+                app:layout_constraintStart_toStartOf="parent"
+                android:hint="@string/login_label_password"
+                app:error="@{vm.bTextPasswordError}"
+                app:errorEnabled="@{safeUnbox(vm.bTextPasswordError == null) ? false : true}">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="8"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@={vm.bTextPassword}"
+                    tools:text="Password"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/til_password"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:onClick="@{v ->view.onClickLogin(v)}"
+                android:text="@string/login_btn_login"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

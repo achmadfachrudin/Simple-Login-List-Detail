@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "563671920041",
+    "firebase_url": "https://project-772954104214432677.firebaseio.com",
+    "project_id": "project-772954104214432677",
+    "storage_bucket": "project-772954104214432677.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563671920041:android:9c708b9cfc87d607",
+        "android_client_info": {
+          "package_name": "com.fachrudin.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563671920041-jad1q4roo01j0udo7p6rb827hs814tm8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrtCGBe2do3C2p6q3vzlmYLH-tYH5vcX0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
